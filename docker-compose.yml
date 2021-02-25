@@ -32,9 +32,9 @@ services:
       - "5053:5053/udp"
 
   # https://github.com/balenablocks/fbcp
-  fbcp:
-    image: balenablocks/fbcp
-    privileged: true
+  #fbcp:
+  #  image: balenablocks/fbcp
+  #  privileged: true
     # restart: on-failure
     # labels:
     #     io.balena.features.dbus: "1"
