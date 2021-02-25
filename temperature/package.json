@@ -1,0 +1,16 @@
+{
+  "name": "resin-beaglebone-temp",
+  "description": "read temperature values with node.js on the Beaglebone using resin.io",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/TristanHorlamus/balena_project.git"
+  },
+  "scripts": {
+    "prestart":"bash before-node-start.sh",
+    "start": "main adc.js"
+  },
+  "version": "0.1.0",
+  "dependencies": {
+    "beaglebone-io": "4.1.0"
+  }
+}
