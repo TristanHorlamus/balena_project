@@ -5,11 +5,11 @@ assets:
   repository:
     type: "blob.asset"
     data:
-      url: "https://github.com/klutchell/balena-pihole"
+      url: "https://github.com/TristanHorlamus/balena_project"
   logo:
     type: "blob.asset"
     data:
-      url: "https://raw.githubusercontent.com/klutchell/balena-pihole/main/logo.png"
+      url: "https://github.com/TristanHorlamus/balena_project/blob/main/logo.png"
 data:
   applicationConfigVariables:
     - BALENA_HOST_CONFIG_gpu_mem: 64
@@ -18,8 +18,7 @@ data:
     - INTERFACE: 'eth0'
     - WEBPASSWORD: 'mysecretpassword'
     - PIHOLE_DNS_: '127.0.0.1#5053'
-    - FBCP_DISPLAY: ""
-  defaultDeviceType: "raspberrypi3"
+  defaultDeviceType: "beaglebone-black"
   supportedDeviceTypes:
     - "raspberry-pi2"
     - "raspberrypi3"
@@ -27,3 +26,4 @@ data:
     - "raspberrypi4-64"
     - "fincm3"
     - "nanopi-neo-air"
+    - "beaglebone-black"
