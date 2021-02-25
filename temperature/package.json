@@ -11,6 +11,7 @@
   },
   "version": "0.1.0",
   "dependencies": {
-    "beaglebone-io": "4.1.0"
+    "beaglebone-io": "4.1.0",
+    "johnny-five": "2.0.0"
   }
 }
