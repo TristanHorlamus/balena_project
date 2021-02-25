@@ -16,8 +16,8 @@ board.on("ready", () => {
     const {address, celsius, fahrenheit, kelvin} = thermometer;
     console.log(`Thermometer at address: 0x${address.toString(16)}`);
     console.log("  celsius      : ", celsius);
-    console.log("  fahrenheit   : ", fahrenheit);
-    console.log("  kelvin       : ", kelvin);
-    console.log("--------------------------------------");
+    //console.log("  fahrenheit   : ", fahrenheit);
+    //console.log("  kelvin       : ", kelvin);
+    //console.log("--------------------------------------");
   });
 });
