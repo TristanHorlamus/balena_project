@@ -38,3 +38,8 @@ services:
     # restart: on-failure
     # labels:
     #     io.balena.features.dbus: "1"
+    
+  # https://github.com/balena-io-playground/beaglebone-adc-node
+  temp:
+    build: ./temperature
+    privileged: true
