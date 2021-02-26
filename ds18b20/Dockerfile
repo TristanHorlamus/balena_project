@@ -30,6 +30,6 @@ COPY ./scripts/ /usr/bin/
 # Copy and compile any overlays into this container so they can later be loaded.
 WORKDIR /overlays
 COPY ./overlays/ /overlays/
-RUN compile_overlays /overlays
+RUN /bin/bash -c 'compile_overlays /overlays'
 
 CMD [ "help_text" ]
