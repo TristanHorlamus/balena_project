@@ -12,7 +12,7 @@ ENV DTC_EXTRA_ARGS=
 
 # Install dependencies.
 RUN apk update && \
-    apk add build-base flex bison git
+    apk add build-base flex bison git pkg-config
 
 # Compile and install the dtc compiler.
 WORKDIR /opt
