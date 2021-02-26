@@ -21,7 +21,7 @@ WORKDIR /opt/dtc
 #RUN git checkout tags/$DTC_TAG -b release && \
 #    make && \
 #    cp dtc /usr/bin/
-RUN make && cp dtc /user/bin/
+RUN make && cp dtc /usr/bin/
 
 
 # Install scripts into usr/bin so the user can perform device tree commands.
