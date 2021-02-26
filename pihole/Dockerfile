@@ -2,7 +2,7 @@ FROM pihole/pihole:v5.7
 
 WORKDIR /usr/src/app
 
-COPY services/ /etc/services.d/
+#COPY services/ /etc/services.d/
 
 ENV DEBIAN_FRONTEND noninteractive
 
@@ -20,8 +20,7 @@ RUN sed '/$AUTHORIZED_HOSTNAMES = array(/ a "balena-devices.com",' -i /var/www/h
 RUN echo "bind-interfaces" >> /etc/dnsmasq.conf
 
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
-RUN curl -fsSL https://github.com/pi-hole/PADD/archive/v3.5.1.tar.gz | tar xz --strip-components 1 \
-	&& chmod +x padd.sh
+#RUN curl -fsSL https://github.com/pi-hole/PADD/archive/v3.5.1.tar.gz | tar xz --strip-components 1 && chmod +x padd.sh
 
-ENV FONTFACE Terminus
-ENV FONTSIZE 8x14
+#ENV FONTFACE Terminus
+#ENV FONTSIZE 8x14
