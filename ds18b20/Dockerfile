@@ -2,7 +2,8 @@ FROM alpine:latest
 
 # Allow the user to override or specify the version of the DTC compiler to use.
 # Default to the latest one at the time of this image's creation (1.4.7).
-ARG DTC_TAG=v1.4.7
+#ARG DTC_TAG=v1.4.7
+ARG DTC_TAG=v1.6.0
 
 # Environment variables that control the behavior of the scripts.
 # Default location to read and write overlay source and binary files.
