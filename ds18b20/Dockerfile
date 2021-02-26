@@ -12,7 +12,7 @@ ENV DTC_EXTRA_ARGS=
 
 # Install dependencies.
 RUN apk update && \
-    apk add build-base flex bison git pkgconfig bash
+    apk add build-base flex bison git pkgconfig
 
 # Compile and install the dtc compiler.
 WORKDIR /opt
@@ -26,10 +26,13 @@ RUN make && cp dtc /usr/bin/
 
 # Install scripts into usr/bin so the user can perform device tree commands.
 COPY ./scripts/ /usr/bin/
+RUN chmod 0755 /usr/bin/apply_overlays
+RUN chmod 0755 /usr/bin/compile_overlays
+RUN chmod 0755 /usr/bin/help_text
 
 # Copy and compile any overlays into this container so they can later be loaded.
 WORKDIR /overlays
 COPY ./overlays/ /overlays/
-RUN /bin/bash -c 'compile_overlays /overlays'
+RUN compile_overlays /overlays
 
 CMD [ "help_text" ]
