@@ -1,4 +1,4 @@
-FROM balenalib/beaglebone-black-node
+FROM resin/beaglebone-black-node:7
 
 WORKDIR /usr/src/app
 
