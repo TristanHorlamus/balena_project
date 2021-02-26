@@ -18,9 +18,11 @@ RUN apk update && \
 WORKDIR /opt
 RUN git clone https://github.com/dgibson/dtc.git
 WORKDIR /opt/dtc
-RUN git checkout tags/$DTC_TAG -b release && \
-    make && \
-    cp dtc /usr/bin/
+#RUN git checkout tags/$DTC_TAG -b release && \
+#    make && \
+#    cp dtc /usr/bin/
+RUN make && cp dtc /user/bin/
+
 
 # Install scripts into usr/bin so the user can perform device tree commands.
 COPY ./scripts/ /usr/bin/
